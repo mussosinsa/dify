@@ -128,13 +128,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/apps',
-        permanent: false,
-      },
-    ]
+    return []
   },
   output: 'standalone',
 }
