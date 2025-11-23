@@ -1,94 +1,50 @@
-.dot-flashing {
+.robot {
   position: relative;
-  animation: dot-flashing 1s infinite linear alternate;
-  animation-delay: 0.5s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 2s ease-in-out infinite;
 }
 
-.dot-flashing::before,
-.dot-flashing::after {
-  content: "";
-  display: inline-block;
+.robot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+
+.glow {
   position: absolute;
-  top: 0;
-  animation: dot-flashing 1s infinite linear alternate;
+  bottom: -6px;
+  width: 80%;
+  height: 14px;
+  background: radial-gradient(closest-side, rgba(21, 94, 239, 0.35), rgba(21, 94, 239, 0));
+  filter: blur(6px);
+  opacity: 0.7;
 }
 
-.dot-flashing::before {
-  animation-delay: 0s;
-}
-
-.dot-flashing::after {
-  animation-delay: 1s;
-}
-
-@keyframes dot-flashing {
+@keyframes float {
   0% {
-    background-color: #667085;
+    transform: translateY(2px);
   }
 
-  50%,
+  50% {
+    transform: translateY(-8px);
+  }
+
   100% {
-    background-color: rgba(102, 112, 133, 0.3);
+    transform: translateY(2px);
   }
-}
-
-@keyframes dot-flashing-avatar {
-  0% {
-    background-color: #155EEF;
-  }
-
-  50%,
-  100% {
-    background-color: rgba(21, 94, 239, 0.3);
-  }
-}
-
-.text,
-.text::before,
-.text::after {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #667085;
-  color: #667085;
-  animation: dot-flashing 1s infinite linear alternate;
-}
-
-.text {
-  animation-delay: 0.5s;
-}
-
-.text::before {
-  left: -7px;
-  animation-delay: 0s;
-}
-
-.text::after {
-  left: 7px;
-  animation-delay: 1s;
-}
-
-.avatar,
-.avatar::before,
-.avatar::after {
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background-color: #155EEF;
-  color: #155EEF;
-  animation: dot-flashing-avatar 1s infinite linear alternate;
 }
 
 .avatar {
-  animation-delay: 0.5s;
+  width: 48px;
+  height: 48px;
 }
 
-.avatar::before {
-  left: -5px;
-  animation-delay: 0s;
-}
-
-.avatar::after {
-  left: 5px;
-  animation-delay: 1s;
+.text {
+  width: 72px;
+  height: 72px;
 }

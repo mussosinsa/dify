@@ -118,7 +118,7 @@ const Answer: FC<AnswerProps> = ({
       <div className='relative h-10 w-10 shrink-0'>
         {answerIcon || <AnswerIcon />}
         {responding && (
-          <div className='absolute left-[-3px] top-[-3px] flex h-4 w-4 items-center rounded-full border-[0.5px] border-divider-subtle bg-background-section-burn pl-[6px] shadow-xs'>
+          <div className='absolute left-[-14px] top-[-14px] flex h-16 w-16 items-center justify-center rounded-full border border-divider-subtle bg-background-section-burn shadow-xs'>
             <LoadingAnim type='avatar' />
           </div>
         )}
@@ -156,7 +156,7 @@ const Answer: FC<AnswerProps> = ({
             }
             {
               responding && contentIsEmpty && !hasAgentThoughts && (
-                <div className='flex h-5 w-6 items-center justify-center'>
+                <div className='flex h-24 w-24 items-center justify-center'>
                   <LoadingAnim type='text' />
                 </div>
               )
