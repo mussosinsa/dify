@@ -111,6 +111,9 @@ const translation = {
     noLoginMethod: 'Authentication method not configured for web app',
     noLoginMethodTip: 'Please contact the system admin to add an authentication method.',
     disabled: 'Webapp authentication is disabled. Please contact the system admin to enable it. You can try to use the app directly.',
+    hostedLoginTitle: 'Sign in before opening the chatflow',
+    hostedLoginDesc: 'Dify web apps are usually protected by your host site\'s login. Authenticate users on your website first, then launch the chatflow app with the session they already have.',
+    ssoBackendNote: 'For SSO, the backend must manage OAuth client credentials, redirects, and token validation before letting people into the chatflow UI.',
   },
   signup: {
     noAccount: 'Don’t have an account? ',

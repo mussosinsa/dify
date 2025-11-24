@@ -3,13 +3,14 @@ import type { FC, PropsWithChildren } from 'react'
 import { useEffect, useState } from 'react'
 import { useCallback } from 'react'
 import { useWebAppStore } from '@/context/web-app-context'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import AppUnavailable from '@/app/components/base/app-unavailable'
 import { useTranslation } from 'react-i18next'
 import { webAppLoginStatus, webAppLogout } from '@/service/webapp-auth'
 import { fetchAccessToken } from '@/service/share'
 import Loading from '@/app/components/base/loading'
 import { setWebAppAccessToken, setWebAppPassport } from '@/service/webapp-auth'
+import { AccessMode } from '@/models/access-control'
 
 const Splash: FC<PropsWithChildren> = ({ children }) => {
   const { t } = useTranslation()
@@ -17,6 +18,7 @@ const Splash: FC<PropsWithChildren> = ({ children }) => {
   const webAppAccessMode = useWebAppStore(s => s.webAppAccessMode)
   const embeddedUserId = useWebAppStore(s => s.embeddedUserId)
   const searchParams = useSearchParams()
+  const pathname = usePathname()
   const router = useRouter()
   const redirectUrl = searchParams.get('redirect_url')
   const message = searchParams.get('message')
@@ -26,8 +28,14 @@ const Splash: FC<PropsWithChildren> = ({ children }) => {
     const params = new URLSearchParams(searchParams)
     params.delete('message')
     params.delete('code')
+    const redirectParams = new URLSearchParams(searchParams)
+    redirectParams.delete('message')
+    redirectParams.delete('code')
+    redirectParams.delete('redirect_url')
+    const redirectTarget = `${pathname}${redirectParams.toString() ? `?${redirectParams.toString()}` : ''}`
+    params.set('redirect_url', redirectUrl || encodeURIComponent(redirectTarget))
     return `/webapp-signin?${params.toString()}`
-  }, [searchParams])
+  }, [pathname, redirectUrl, searchParams])
 
   const backToHome = useCallback(async () => {
     await webAppLogout(shareCode!)
@@ -37,12 +45,15 @@ const Splash: FC<PropsWithChildren> = ({ children }) => {
 
   const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
+    const shouldShowSignin = webAppAccessMode !== AccessMode.PUBLIC
+    const isOnSigninPage = pathname.includes('/webapp-signin')
+
     if (message) {
       setIsLoading(false)
       return
     }
 
-    if(tokenFromUrl)
+    if (tokenFromUrl)
       setWebAppAccessToken(tokenFromUrl)
 
     const redirectOrFinish = () => {
@@ -59,6 +70,10 @@ const Splash: FC<PropsWithChildren> = ({ children }) => {
     (async () => {
       // if access mode is public, user login is always true, but the app login(passport) may be expired
       const { userLoggedIn, appLoggedIn } = await webAppLoginStatus(shareCode!)
+      if (!userLoggedIn && !appLoggedIn && shouldShowSignin && !isOnSigninPage) {
+        router.replace(getSigninUrl())
+        return
+      }
       if (userLoggedIn && appLoggedIn) {
         redirectOrFinish()
       }
@@ -90,7 +105,9 @@ const Splash: FC<PropsWithChildren> = ({ children }) => {
     message,
     webAppAccessMode,
     tokenFromUrl,
-    embeddedUserId])
+    embeddedUserId,
+    pathname,
+    getSigninUrl])
 
   if (message) {
     return <div className='flex h-full flex-col items-center justify-center gap-y-4'>

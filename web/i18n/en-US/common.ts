@@ -767,6 +767,99 @@ const translation = {
     browse: 'browse',
     supportedFormats: 'Supports PNG, JPG, JPEG, WEBP and GIF',
   },
+  home: {
+    greeting: '{{name}}, hello.',
+    subtitle: 'What can we help you with?',
+    categories: [
+      'Popular help',
+      'Work support',
+      'Learning and study',
+      'Personal life',
+      'Travel',
+    ],
+    cards: {
+      agenda: {
+        title: 'I will set up your day.',
+        details: [
+          'I will organize your schedule in a table.',
+          'I will prioritize what matters most.',
+          'I will draft the plan with confidence.',
+        ],
+        badge: 'A few seconds',
+      },
+      resume: {
+        title: 'I can help tailor your resume for you.',
+        details: [
+          'I will recommend the best resume format.',
+          'I will help write a professional summary.',
+          'I will include impactful job duties.',
+        ],
+        badge: 'A few seconds',
+      },
+      sms: {
+        title: 'I will design SMS message templates.',
+        details: [
+          'I will propose attention-grabbing title and summary.',
+          'I will suggest a catchy hook.',
+          'I will offer up to five message variations.',
+        ],
+        badge: 'A few seconds',
+      },
+      travel: {
+        title: 'I will recommend travel destinations.',
+        details: [
+          'I will include tailored destination tips.',
+          'I will highlight the best sights.',
+          'I will draft your schedule.',
+        ],
+        badge: 'A few seconds',
+      },
+      news: {
+        title: 'I will surface the latest finance news.',
+        details: [
+          'I will analyze news with credible sources.',
+          'I will provide a summarized takeaway.',
+          'I will include reliable statistics.',
+        ],
+        badge: 'A few seconds',
+      },
+      portfolio: {
+        title: 'I can also build a portfolio for you.',
+        details: [
+          'I will review your resume for improvements.',
+          'I will compile your career strengths.',
+          'I will create a narrative that stands out.',
+        ],
+        badge: 'A few seconds',
+      },
+      problem: {
+        title: 'Need help unblocking a challenge?',
+        details: [
+          'I will draft a problem definition.',
+          'I will gather references from past solutions.',
+          'I will present step-by-step fixes.',
+        ],
+        badge: 'A few seconds',
+      },
+      gpt: {
+        title: 'Want to create a GPT with your company info?',
+        details: [
+          'I will collect company documents.',
+          'I will build a structured knowledge base.',
+          'I will generate a ready-to-use GPT.',
+        ],
+        badge: 'A few seconds',
+      },
+    },
+    actions: {
+      newChat: 'New Chat',
+      myChats: 'My AI Chats',
+      searchPlaceholder: 'Search',
+      pinnedTitle: 'Pinned',
+      pinnedEmpty: 'How can we assist you today?',
+    },
+    inputPlaceholder: 'Upload an image, audio, or file for help. (e.g., share a photo of an umbrella)',
+  },
   you: 'You',
 }
 

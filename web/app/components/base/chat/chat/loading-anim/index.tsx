@@ -12,7 +12,13 @@ const LoadingAnim: FC<ILoadingAnimProps> = ({
   type,
 }) => {
   return (
-    <div className={cn(s['dot-flashing'], s[type])} />
+    <div className={cn(s.robot, s[type])}>
+      <img
+        src='/images/chat/robot-waiting.svg'
+        alt='Waiting robot'
+      />
+      <div className={s.glow} />
+    </div>
   )
 }
 export default React.memo(LoadingAnim)
