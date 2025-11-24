@@ -110,6 +110,9 @@ const translation = {
     disabled: '웹앱 인증이 비활성화되었습니다. 이를 활성화하려면 시스템 관리자에게 문의하십시오. 앱을 직접 사용해 볼 수 있습니다.',
     noLoginMethodTip: '인증 방법을 추가하려면 시스템 관리자에게 연락하십시오.',
     login: '로그인',
+    hostedLoginTitle: '챗플로우를 열기 전에 로그인하세요',
+    hostedLoginDesc: 'Dify 웹앱은 보통 호스팅 사이트 로그인으로 보호됩니다. 먼저 웹사이트에서 인증한 뒤, 이미 가진 세션으로 챗플로우 앱을 실행하는 방식이 일반적입니다.',
+    ssoBackendNote: 'SSO 를 사용할 경우 OAuth 클라이언트 ID/시크릿 관리, 로그인 리디렉션, 토큰 검증을 백엔드에서 처리한 후 챗플로우 UI 에 접근시켜야 합니다.',
   },
   signup: {
     signIn: '로그인',

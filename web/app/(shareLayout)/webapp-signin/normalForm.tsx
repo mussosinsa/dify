@@ -97,6 +97,11 @@ const NormalForm = () => {
           <h2 className="title-4xl-semi-bold text-text-primary">{t('login.pageTitle')}</h2>
           {!systemFeatures.branding.enabled && <p className='body-md-regular mt-2 text-text-tertiary'>{t('login.welcome')}</p>}
         </div>
+        <div className="mt-4 rounded-xl border border-divider-subtle bg-background-default-subtle p-4">
+          <p className='system-sm-medium text-text-primary'>{t('login.webapp.hostedLoginTitle')}</p>
+          <p className='system-xs-regular mt-1 text-text-tertiary'>{t('login.webapp.hostedLoginDesc')}</p>
+          <p className='system-xs-regular mt-2 text-text-tertiary'>{t('login.webapp.ssoBackendNote')}</p>
+        </div>
         <div className="relative">
           <div className="mt-6 flex flex-col gap-3">
             {systemFeatures.sso_enforced_for_signin && <div className='w-full'>
