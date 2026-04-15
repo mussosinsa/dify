@@ -112,7 +112,7 @@ export const getFileAppearanceType = (fileName: string, fileMimetype: string) =>
   if (extension === 'xlsx' || extension === 'xls')
     return FileAppearanceTypeEnum.excel
 
-  if (extension === 'docx' || extension === 'doc')
+  if (extension === 'docx' || extension === 'doc' || extension === 'hwp' || extension === 'hwpx')
     return FileAppearanceTypeEnum.word
 
   if (extension === 'pptx' || extension === 'ppt')

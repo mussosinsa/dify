@@ -13,6 +13,7 @@ from core.rag.extractor.excel_extractor import ExcelExtractor
 from core.rag.extractor.extractor_base import BaseExtractor
 from core.rag.extractor.firecrawl.firecrawl_web_extractor import FirecrawlWebExtractor
 from core.rag.extractor.html_extractor import HtmlExtractor
+from core.rag.extractor.hwp_extractor import HwpExtractor, HwpxExtractor
 from core.rag.extractor.jina_reader_extractor import JinaReaderWebExtractor
 from core.rag.extractor.markdown_extractor import MarkdownExtractor
 from core.rag.extractor.notion_extractor import NotionExtractor
@@ -141,6 +142,10 @@ class ExtractProcessor:
                         extractor = UnstructuredXmlExtractor(file_path, unstructured_api_url, unstructured_api_key)
                     elif file_extension == ".epub":
                         extractor = UnstructuredEpubExtractor(file_path, unstructured_api_url, unstructured_api_key)
+                    elif file_extension == ".hwpx":
+                        extractor = HwpxExtractor(file_path)
+                    elif file_extension == ".hwp":
+                        extractor = HwpExtractor(file_path, unstructured_api_url, unstructured_api_key)
                     else:
                         # txt
                         extractor = TextExtractor(file_path, autodetect_encoding=True)
@@ -159,6 +164,8 @@ class ExtractProcessor:
                         extractor = CSVExtractor(file_path, autodetect_encoding=True)
                     elif file_extension == ".epub":
                         extractor = UnstructuredEpubExtractor(file_path)
+                    elif file_extension == ".hwpx":
+                        extractor = HwpxExtractor(file_path)
                     else:
                         # txt
                         extractor = TextExtractor(file_path, autodetect_encoding=True)
