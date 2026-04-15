@@ -160,6 +160,10 @@ def _extract_text_by_mime_type(*, file_content: bytes, mime_type: str) -> str:
             return _extract_text_from_vtt(file_content)
         case "text/properties":
             return _extract_text_from_properties(file_content)
+        case "application/x-hwp" | "application/vnd.hancom.hwp":
+            return _extract_text_from_hwp(file_content)
+        case "application/x-hwpx" | "application/vnd.hancom.hwpx":
+            return _extract_text_from_hwpx(file_content)
         case _:
             raise UnsupportedFileTypeError(f"Unsupported MIME type: {mime_type}")
 
@@ -245,6 +249,10 @@ def _extract_text_by_file_extension(*, file_content: bytes, file_extension: str)
             return _extract_text_from_msg(file_content)
         case ".properties":
             return _extract_text_from_properties(file_content)
+        case ".hwp":
+            return _extract_text_from_hwp(file_content)
+        case ".hwpx":
+            return _extract_text_from_hwpx(file_content)
         case _:
             raise UnsupportedFileTypeError(f"Unsupported Extension Type: {file_extension}")
 
@@ -664,6 +672,63 @@ def _extract_text_from_vtt(vtt_bytes: bytes) -> str:
     # Return the result in the specified format: Speaker "text" style
     formatted = [f'{spk or ""} "{txt}"' for spk, txt in merged_results]
     return "\n".join(formatted)
+
+
+def _extract_text_from_hwpx(file_content: bytes) -> str:
+    """Extract text from HWPX file (ZIP-based XML format)."""
+    import re
+    import xml.etree.ElementTree as ET
+    import zipfile
+
+    try:
+        texts: list[str] = []
+        with zipfile.ZipFile(io.BytesIO(file_content)) as zf:
+            section_files = sorted(
+                [f for f in zf.namelist() if re.match(r"Contents/section\d+\.xml", f)]
+            )
+            if not section_files:
+                section_files = sorted(
+                    [f for f in zf.namelist() if f.endswith(".xml") and "section" in f.lower()]
+                )
+            for section_file in section_files:
+                with zf.open(section_file) as f:
+                    root = ET.parse(f).getroot()
+                    for elem in root.iter():
+                        local = elem.tag.split("}")[-1] if "}" in elem.tag else elem.tag
+                        if local == "t" and elem.text:
+                            texts.append(elem.text)
+        return "\n".join(filter(None, texts))
+    except zipfile.BadZipFile as e:
+        raise TextExtractionError(f"Not a valid HWPX file: {e}") from e
+    except Exception as e:
+        raise TextExtractionError(f"Failed to extract text from HWPX: {e}") from e
+
+
+def _extract_text_from_hwp(file_content: bytes) -> str:
+    """Extract text from HWP binary file via the Unstructured API."""
+    from unstructured.partition.api import partition_via_api
+
+    if not dify_config.UNSTRUCTURED_API_URL:
+        raise TextExtractionError("UNSTRUCTURED_API_URL must be set to process HWP files")
+
+    try:
+        with tempfile.NamedTemporaryFile(suffix=".hwp", delete=False) as tmp:
+            tmp.write(file_content)
+            tmp.flush()
+            tmp_path = tmp.name
+        try:
+            with open(tmp_path, "rb") as file:
+                elements = partition_via_api(
+                    file=file,
+                    metadata_filename=tmp_path,
+                    api_url=dify_config.UNSTRUCTURED_API_URL,
+                    api_key=dify_config.UNSTRUCTURED_API_KEY,  # type: ignore
+                )
+        finally:
+            os.unlink(tmp_path)
+        return "\n".join([getattr(element, "text", "") for element in elements])
+    except Exception as e:
+        raise TextExtractionError(f"Failed to extract text from HWP: {e}") from e
 
 
 def _extract_text_from_properties(file_content: bytes) -> str:

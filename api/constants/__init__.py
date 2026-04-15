@@ -35,6 +35,8 @@ if dify_config.ETL_TYPE == "Unstructured":
         "pptx",
         "xml",
         "epub",
+        "hwp",
+        "hwpx",
     }
     if dify_config.UNSTRUCTURED_API_URL:
         _doc_extensions.add("ppt")
@@ -53,6 +55,7 @@ else:
         "csv",
         "vtt",
         "properties",
+        "hwpx",
     }
 DOCUMENT_EXTENSIONS: set[str] = convert_to_lower_and_upper_set(_doc_extensions)
 

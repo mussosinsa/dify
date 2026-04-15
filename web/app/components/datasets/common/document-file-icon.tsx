@@ -17,6 +17,8 @@ const extendToFileTypeMap: { [key: string]: FileAppearanceType } = {
   csv: FileAppearanceTypeEnum.excel,
   doc: FileAppearanceTypeEnum.word,
   docx: FileAppearanceTypeEnum.word,
+  hwp: FileAppearanceTypeEnum.word,
+  hwpx: FileAppearanceTypeEnum.word,
 }
 
 type Props = {

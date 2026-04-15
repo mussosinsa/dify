@@ -6,6 +6,8 @@ export const extensionToFileType = (extension: string): FileAppearanceTypeEnum =
       return FileAppearanceTypeEnum.pdf
     case 'doc':
     case 'docx':
+    case 'hwp':
+    case 'hwpx':
       return FileAppearanceTypeEnum.word
     case 'md':
     case 'mdx':
