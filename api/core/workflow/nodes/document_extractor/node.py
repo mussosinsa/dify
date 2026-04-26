@@ -676,57 +676,20 @@ def _extract_text_from_vtt(vtt_bytes: bytes) -> str:
 
 def _extract_text_from_hwpx(file_content: bytes) -> str:
     """Extract text from HWPX file (ZIP-based XML format)."""
-    import re
-    import xml.etree.ElementTree as ET
-    import zipfile
+    from core.rag.extractor.hwp_extractor import extract_hwpx_text
 
     try:
-        texts: list[str] = []
-        with zipfile.ZipFile(io.BytesIO(file_content)) as zf:
-            section_files = sorted(
-                [f for f in zf.namelist() if re.match(r"Contents/section\d+\.xml", f)]
-            )
-            if not section_files:
-                section_files = sorted(
-                    [f for f in zf.namelist() if f.endswith(".xml") and "section" in f.lower()]
-                )
-            for section_file in section_files:
-                with zf.open(section_file) as f:
-                    root = ET.parse(f).getroot()
-                    for elem in root.iter():
-                        local = elem.tag.split("}")[-1] if "}" in elem.tag else elem.tag
-                        if local == "t" and elem.text:
-                            texts.append(elem.text)
-        return "\n".join(filter(None, texts))
-    except zipfile.BadZipFile as e:
-        raise TextExtractionError(f"Not a valid HWPX file: {e}") from e
+        return extract_hwpx_text(file_content)
     except Exception as e:
         raise TextExtractionError(f"Failed to extract text from HWPX: {e}") from e
 
 
 def _extract_text_from_hwp(file_content: bytes) -> str:
-    """Extract text from HWP binary file via the Unstructured API."""
-    from unstructured.partition.api import partition_via_api
-
-    if not dify_config.UNSTRUCTURED_API_URL:
-        raise TextExtractionError("UNSTRUCTURED_API_URL must be set to process HWP files")
+    """Extract text from HWP binary file."""
+    from core.rag.extractor.hwp_extractor import extract_hwp_text
 
     try:
-        with tempfile.NamedTemporaryFile(suffix=".hwp", delete=False) as tmp:
-            tmp.write(file_content)
-            tmp.flush()
-            tmp_path = tmp.name
-        try:
-            with open(tmp_path, "rb") as file:
-                elements = partition_via_api(
-                    file=file,
-                    metadata_filename=tmp_path,
-                    api_url=dify_config.UNSTRUCTURED_API_URL,
-                    api_key=dify_config.UNSTRUCTURED_API_KEY,  # type: ignore
-                )
-        finally:
-            os.unlink(tmp_path)
-        return "\n".join([getattr(element, "text", "") for element in elements])
+        return extract_hwp_text(file_content)
     except Exception as e:
         raise TextExtractionError(f"Failed to extract text from HWP: {e}") from e
 
