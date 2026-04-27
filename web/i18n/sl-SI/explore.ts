@@ -16,7 +16,7 @@ const translation = {
     },
   },
   apps: {
-    title: 'Razišči aplikacije Dify',
+    title: 'Razišči aplikacije D-GEN AI',
     description: 'Uporabite te predloge aplikacij takoj ali prilagodite svoje aplikacije na podlagi predlog.',
     allCategories: 'Priporočeno',
   },

@@ -8,7 +8,7 @@ const translation = {
   },
   webapp: {
     title: 'web app markasını özelleştir',
-    removeBrand: 'Powered by Dify\'i kaldır',
+    removeBrand: 'Powered by D-GEN AI\'i kaldır',
     changeLogo: 'Powered by Brand Resmini Değiştir',
     changeLogoTip: 'SVG veya PNG formatında, en az 40x40px boyutunda',
   },

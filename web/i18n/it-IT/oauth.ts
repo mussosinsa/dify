@@ -1,7 +1,7 @@
 const translation = {
   tips: {
-    notLoggedIn: 'Questa app vuole accedere al tuo account Dify Cloud',
-    loggedIn: 'Questa app vuole accedere alle seguenti informazioni dal tuo account Dify Cloud.',
+    notLoggedIn: 'Questa app vuole accedere al tuo account D-GEN AI Cloud',
+    loggedIn: 'Questa app vuole accedere alle seguenti informazioni dal tuo account D-GEN AI Cloud.',
     common: 'Rispettiamo la tua privacy e utilizzeremo queste informazioni solo per migliorare la tua esperienza con i nostri strumenti per sviluppatori.',
     needLogin: 'Per favore, accedi per autorizzare',
   },

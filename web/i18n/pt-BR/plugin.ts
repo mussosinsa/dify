@@ -191,12 +191,12 @@ const translation = {
     and: 'e',
     pluginsResult: '{{num}} resultados',
     empower: 'Capacite seu desenvolvimento de IA',
-    difyMarketplace: 'Mercado Dify',
+    difyMarketplace: 'Mercado D-GEN AI',
     moreFrom: 'Mais do Marketplace',
     noPluginFound: 'Nenhum plugin encontrado',
     discover: 'Descobrir',
-    verifiedTip: 'Verificado pelo Dify',
-    partnerTip: 'Verificado por um parceiro da Dify',
+    verifiedTip: 'Verificado pelo D-GEN AI',
+    partnerTip: 'Verificado por um parceiro da D-GEN AI',
   },
   task: {
     installedError: 'Falha na instalação dos plug-ins {{errorLength}}',
@@ -223,7 +223,7 @@ const translation = {
   metadata: {
     title: 'Plugins',
   },
-  difyVersionNotCompatible: 'A versão atual do Dify não é compatível com este plugin, por favor atualize para a versão mínima exigida: {{minimalDifyVersion}}',
+  difyVersionNotCompatible: 'A versão atual do D-GEN AI não é compatível com este plugin, por favor atualize para a versão mínima exigida: {{minimalDifyVersion}}',
   requestAPlugin: 'Solicitar um plugin',
   publishPlugins: 'Publicar plugins',
   auth: {

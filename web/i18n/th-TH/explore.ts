@@ -16,7 +16,7 @@ const translation = {
     },
   },
   apps: {
-    title: 'สํารวจแอพโดย Dify',
+    title: 'สํารวจแอพโดย D-GEN AI',
     description: 'ใช้แอปเทมเพลตเหล่านี้ทันทีหรือปรับแต่งแอปของคุณเองตามเทมเพลต',
     allCategories: 'แนะ นำ',
   },

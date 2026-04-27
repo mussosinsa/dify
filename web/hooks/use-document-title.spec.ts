@@ -33,14 +33,14 @@ describe('use default branding', () => {
       })
     })
   })
-  it('document title should be test-Dify if set title', () => {
+  it('document title should be test-D-GEN AI if set title', () => {
     renderHook(() => useDocumentTitle('test'))
-    expect(document.title).toBe('test - Dify')
+    expect(document.title).toBe('test - D-GEN AI')
   })
 
-  it('document title should be Dify if not set title', () => {
+  it('document title should be D-GEN AI if not set title', () => {
     renderHook(() => useDocumentTitle(''))
-    expect(document.title).toBe('Dify')
+    expect(document.title).toBe('D-GEN AI')
   })
 })
 

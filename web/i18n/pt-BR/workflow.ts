@@ -935,7 +935,7 @@ const translation = {
       chunkStructureTip: {
         title: 'Escolha uma estrutura de blocos',
         learnMore: 'Saiba Mais',
-        message: 'A Base de Conhecimento Dify oferece suporte a três estruturas de agrupamento: Geral, Pai-filho e Perguntas e Respostas. Cada base de conhecimento pode ter apenas uma estrutura. A saída do nó anterior deve estar alinhada com a estrutura de partes selecionada. Observe que a escolha da estrutura de agrupamento afeta os métodos de índice disponíveis.',
+        message: 'A Base de Conhecimento D-GEN AI oferece suporte a três estruturas de agrupamento: Geral, Pai-filho e Perguntas e Respostas. Cada base de conhecimento pode ter apenas uma estrutura. A saída do nó anterior deve estar alinhada com a estrutura de partes selecionada. Observe que a escolha da estrutura de agrupamento afeta os métodos de índice disponíveis.',
       },
       retrievalSettingIsRequired: 'A configuração de recuperação é necessária',
       changeChunkStructure: 'Alterar estrutura de blocos',

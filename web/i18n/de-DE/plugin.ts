@@ -209,13 +209,13 @@ const translation = {
     sortBy: 'Sortieren nach',
     discover: 'Entdecken',
     noPluginFound: 'Kein Plugin gefunden',
-    difyMarketplace: 'Dify Marktplatz',
+    difyMarketplace: 'D-GEN AI Marktplatz',
     moreFrom: 'Mehr aus dem Marketplace',
     pluginsResult: '{{num}} Ergebnisse',
     empower: 'Unterstützen Sie Ihre KI-Entwicklung',
     and: 'und',
-    partnerTip: 'Von einem Dify-Partner verifiziert',
-    verifiedTip: 'Von Dify überprüft',
+    partnerTip: 'Von einem D-GEN AI-Partner verifiziert',
+    verifiedTip: 'Von D-GEN AI überprüft',
   },
   task: {
     clearAll: 'Alle löschen',
@@ -246,7 +246,7 @@ const translation = {
     title: 'Plugins',
   },
   difyVersionNotCompatible:
-    'Die aktuelle Dify-Version ist mit diesem Plugin nicht kompatibel, bitte aktualisieren Sie auf die erforderliche Mindestversion: {{minimalDifyVersion}}',
+    'Die aktuelle D-GEN AI-Version ist mit diesem Plugin nicht kompatibel, bitte aktualisieren Sie auf die erforderliche Mindestversion: {{minimalDifyVersion}}',
   requestAPlugin: 'Ein Plugin anfordern',
   publishPlugins: 'Plugins veröffentlichen',
   auth: {

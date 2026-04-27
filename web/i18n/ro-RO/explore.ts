@@ -16,7 +16,7 @@ const translation = {
     },
   },
   apps: {
-    title: 'Explorați aplicațiile Dify',
+    title: 'Explorați aplicațiile D-GEN AI',
     description: 'Utilizați aceste aplicații model imediat sau personalizați-vă propria aplicație pe baza modelelor.',
     allCategories: 'Recomandate',
   },

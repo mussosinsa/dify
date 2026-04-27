@@ -1,7 +1,7 @@
 const translation = {
   title: 'ツール',
   createCustomTool: 'カスタムツールを作成する',
-  customToolTip: 'Dify カスタムツールの詳細',
+  customToolTip: 'D-GEN AI カスタムツールの詳細',
   type: {
     all: 'すべて',
     builtIn: 'ツール',
@@ -10,7 +10,7 @@ const translation = {
   },
   contribute: {
     line1: '私は',
-    line2: 'Dify へのツールの貢献に興味があります。',
+    line2: 'D-GEN AI へのツールの貢献に興味があります。',
     viewGuide: 'ガイドを見る',
   },
   author: '著者：',

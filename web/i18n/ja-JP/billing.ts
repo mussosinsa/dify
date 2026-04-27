@@ -62,7 +62,7 @@ const translation = {
     apiRateLimit: 'API レート制限',
     apiRateLimitUnit: '{{count,number}}/日',
     unlimitedApiRate: '無制限の API コール',
-    apiRateLimitTooltip: 'API レート制限は、テキスト生成、チャットボット、ワークフロー、ドキュメント処理など、Dify API 経由のすべてのリクエストに適用されます。',
+    apiRateLimitTooltip: 'API レート制限は、テキスト生成、チャットボット、ワークフロー、ドキュメント処理など、D-GEN AI API 経由のすべてのリクエストに適用されます。',
     documentProcessingPriority: '文書処理',
     documentProcessingPriorityUpgrade: 'より高い精度と高速な速度でデータを処理します。',
     priority: {
@@ -98,13 +98,13 @@ const translation = {
     messageRequest: {
       title: '{{count,number}}メッセージクレジット',
       titlePerMonth: '{{count,number}}メッセージクレジット/月',
-      tooltip: 'メッセージクレジットは、Dify でさまざまな OpenAI モデルを簡単にお試しいただくためのものです。モデルタイプに応じてクレジットが消費され、使い切った後はご自身の OpenAI API キーに切り替えていただけます。',
+      tooltip: 'メッセージクレジットは、D-GEN AI でさまざまな OpenAI モデルを簡単にお試しいただくためのものです。モデルタイプに応じてクレジットが消費され、使い切った後はご自身の OpenAI API キーに切り替えていただけます。',
     },
     annotatedResponse: {
       title: '{{count,number}}の注釈クォータ制限',
       tooltip: '手動での回答の編集と注釈により、カスタマイズ可能な高品質の質問応答機能をアプリに提供します。（チャットアプリのみに適用）',
     },
-    ragAPIRequestTooltip: 'Dify のナレッジベース処理機能のみを呼び出す API 呼び出しの数を指します。',
+    ragAPIRequestTooltip: 'D-GEN AI のナレッジベース処理機能のみを呼び出す API 呼び出しの数を指します。',
     receiptInfo: 'チームオーナーとチーム管理者のみが購読および請求情報を表示できます',
     startBuilding: '構築を開始する',
   },
@@ -134,7 +134,7 @@ const translation = {
       features: [
         'パブリックリポジトリの全コア機能',
         'シングルワークスペース',
-        'Dify オープンソースライセンス準拠',
+        'D-GEN AI オープンソースライセンス準拠',
       ],
     },
     premium: {
@@ -167,7 +167,7 @@ const translation = {
         '企業専用機能',
         'マルチワークスペース管理',
         'シングルサインオン（SSO）',
-        'Dify パートナーによる SLA 保証',
+        'D-GEN AI パートナーによる SLA 保証',
         '高度なセキュリティ管理',
         '公式メンテナンス＆アップデート',
         'プロフェッショナル技術支援',

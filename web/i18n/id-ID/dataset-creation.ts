@@ -204,7 +204,7 @@ const translation = {
   otherDataSource: {
     title: 'Terhubung ke sumber data lain?',
     learnMore: 'Pelajari lebih lanjut',
-    description: 'Saat ini, basis pengetahuan Dify hanya memiliki sumber data yang terbatas. Menyumbangkan sumber data ke basis pengetahuan Dify adalah cara yang fantastis untuk membantu meningkatkan fleksibilitas dan kekuatan platform bagi semua pengguna. Panduan kontribusi kami memudahkan untuk memulai. Silakan klik tautan di bawah ini untuk mempelajari lebih lanjut.',
+    description: 'Saat ini, basis pengetahuan D-GEN AI hanya memiliki sumber data yang terbatas. Menyumbangkan sumber data ke basis pengetahuan D-GEN AI adalah cara yang fantastis untuk membantu meningkatkan fleksibilitas dan kekuatan platform bagi semua pengguna. Panduan kontribusi kami memudahkan untuk memulai. Silakan klik tautan di bawah ini untuk mempelajari lebih lanjut.',
   },
 }
 
