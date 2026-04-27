@@ -32,8 +32,9 @@ class OpenDALStorage(BaseStorage):
         kwargs = kwargs or _get_opendal_kwargs(scheme=scheme)
 
         if scheme == "fs":
-            root = kwargs.get("root", "storage")
-            Path(root).mkdir(parents=True, exist_ok=True)
+            if "root" not in kwargs:
+                kwargs["root"] = "storage"
+            Path(kwargs["root"]).mkdir(parents=True, exist_ok=True)
 
         retry_layer = opendal.layers.RetryLayer(max_times=3, factor=2.0, jitter=True)
         self.op = Operator(scheme=scheme, **kwargs).layer(retry_layer)

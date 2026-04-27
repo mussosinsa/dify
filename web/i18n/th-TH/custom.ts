@@ -8,7 +8,7 @@ const translation = {
   },
   webapp: {
     title: 'ปรับแต่งแบรนด์ web app',
-    removeBrand: 'ลบ ขับเคลื่อนโดย Dify',
+    removeBrand: 'ลบ ขับเคลื่อนโดย D-GEN AI',
     changeLogo: 'การเปลี่ยนแปลงที่ขับเคลื่อนโดยภาพลักษณ์ของแบรนด์',
     changeLogoTip: 'รูปแบบ SVG หรือ PNG ที่มีขนาดขั้นต่ํา 40x40px',
   },

@@ -191,12 +191,12 @@ const translation = {
     noPluginFound: 'Плагин не найден',
     sortBy: 'Черный город',
     empower: 'Расширьте возможности разработки ИИ',
-    difyMarketplace: 'Торговая площадка Dify',
+    difyMarketplace: 'Торговая площадка D-GEN AI',
     viewMore: 'Подробнее',
     and: 'и',
     discover: 'Обнаруживать',
-    verifiedTip: 'Подтверждено Dify',
-    partnerTip: 'Подтверждено партнером Dify',
+    verifiedTip: 'Подтверждено D-GEN AI',
+    partnerTip: 'Подтверждено партнером D-GEN AI',
   },
   task: {
     installing: 'Установка плагинов {{installingLength}}, 0 готово.',
@@ -223,7 +223,7 @@ const translation = {
   metadata: {
     title: 'Плагины',
   },
-  difyVersionNotCompatible: 'Текущая версия Dify не совместима с этим плагином, пожалуйста, обновите до минимально необходимой версии: {{minimalDifyVersion}}',
+  difyVersionNotCompatible: 'Текущая версия D-GEN AI не совместима с этим плагином, пожалуйста, обновите до минимально необходимой версии: {{minimalDifyVersion}}',
   requestAPlugin: 'Запросите плагин',
   publishPlugins: 'Публикация плагинов',
   auth: {

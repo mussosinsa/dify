@@ -13,7 +13,7 @@ const translation = {
   datasetDeleted: 'Wiedza usunięta',
   datasetDeleteFailed: 'Nie udało się usunąć Wiedzy',
   didYouKnow: 'Czy wiedziałeś?',
-  intro1: 'Wiedzę można zintegrować z aplikacją Dify ',
+  intro1: 'Wiedzę można zintegrować z aplikacją D-GEN AI ',
   intro2: 'jako kontekst',
   intro3: ',',
   intro4: 'lub ',
@@ -155,7 +155,7 @@ const translation = {
   externalTag: 'Zewnętrzny',
   learnHowToWriteGoodKnowledgeDescription: 'Dowiedz się, jak napisać dobry opis wiedzy',
   externalKnowledgeNamePlaceholder: 'Podaj nazwę bazy wiedzy',
-  externalAPIPanelDescription: 'Interfejs API wiedzy zewnętrznej służy do łączenia się z bazą wiedzy poza Dify i pobierania wiedzy z tej bazy wiedzy.',
+  externalAPIPanelDescription: 'Interfejs API wiedzy zewnętrznej służy do łączenia się z bazą wiedzy poza D-GEN AI i pobierania wiedzy z tej bazy wiedzy.',
   chunkingMode: {
     parentChild: 'Rodzic-dziecko',
     general: 'Ogólne',

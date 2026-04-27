@@ -187,7 +187,7 @@ const translation = {
   account: {
     account: 'บัญชี',
     myAccount: 'บัญชีของฉัน',
-    studio: 'Dify สตูดิโอ',
+    studio: 'D-GEN AI สตูดิโอ',
     avatar: 'อวตาร',
     name: 'ชื่อ',
     email: 'อีเมล',
@@ -199,8 +199,8 @@ const translation = {
     newPassword: 'รหัสผ่านใหม่',
     confirmPassword: 'ยืนยันรหัสผ่าน',
     notEqual: 'รหัสผ่านสองรหัสผ่านแตกต่างกัน',
-    langGeniusAccount: 'บัญชี Dify',
-    langGeniusAccountTip: 'บัญชี Dify และข้อมูลผู้ใช้ที่เกี่ยวข้อง',
+    langGeniusAccount: 'บัญชี D-GEN AI',
+    langGeniusAccountTip: 'บัญชี D-GEN AI และข้อมูลผู้ใช้ที่เกี่ยวข้อง',
     editName: 'แก้ไขชื่อ',
     showAppLength: 'แสดง {{length}} แอป',
     delete: 'ลบบัญชี',
@@ -271,7 +271,7 @@ const translation = {
     sendInvite: 'ส่งคําเชิญ',
     invitedAsRole: 'ได้รับเชิญให้เป็นผู้ใช้ {{role}}',
     invitationSent: 'ส่งคําเชิญแล้ว',
-    invitationSentTip: 'ส่งคําเชิญแล้ว และพวกเขาสามารถลงชื่อเข้าใช้ Dify เพื่อเข้าถึงข้อมูลทีมของคุณได้',
+    invitationSentTip: 'ส่งคําเชิญแล้ว และพวกเขาสามารถลงชื่อเข้าใช้ D-GEN AI เพื่อเข้าถึงข้อมูลทีมของคุณได้',
     invitationLink: 'ลิงค์คําเชิญ',
     failedInvitationEmails: 'ผู้ใช้ด้านล่างไม่ได้รับเชิญสําเร็จ',
     ok: 'ตกลง, ได้',
@@ -340,7 +340,7 @@ const translation = {
       openaiHosted: 'โฮสต์ OpenAI',
       onTrial: 'ทดลองใช้',
       exhausted: 'โควต้าหมด',
-      desc: 'บริการโฮสติ้ง OpenAI ที่ให้บริการโดย Dify ช่วยให้คุณใช้โมเดลต่างๆ เช่น GPT-3.5 ก่อนที่โควต้าการทดลองใช้ของคุณจะหมด คุณจําเป็นต้องตั้งค่าผู้ให้บริการรุ่นอื่นๆ',
+      desc: 'บริการโฮสติ้ง OpenAI ที่ให้บริการโดย D-GEN AI ช่วยให้คุณใช้โมเดลต่างๆ เช่น GPT-3.5 ก่อนที่โควต้าการทดลองใช้ของคุณจะหมด คุณจําเป็นต้องตั้งค่าผู้ให้บริการรุ่นอื่นๆ',
       callTimes: 'เวลาโทร',
       usedUp: 'โควต้าทดลองใช้หมด เพิ่มผู้ให้บริการโมเดลของตัวเอง',
       useYourModel: 'ปัจจุบันใช้ผู้ให้บริการโมเดลของตัวเอง',
@@ -548,7 +548,7 @@ const translation = {
     },
   },
   apiBasedExtension: {
-    title: 'ส่วนขยาย API ให้การจัดการ API แบบรวมศูนย์ ทําให้การกําหนดค่าง่ายขึ้นเพื่อให้ใช้งานได้ง่ายในแอปพลิเคชันของ Dify',
+    title: 'ส่วนขยาย API ให้การจัดการ API แบบรวมศูนย์ ทําให้การกําหนดค่าง่ายขึ้นเพื่อให้ใช้งานได้ง่ายในแอปพลิเคชันของ D-GEN AI',
     link: 'เรียนรู้วิธีพัฒนาส่วนขยาย API ของคุณเอง',
     add: 'เพิ่มส่วนขยาย API',
     selector: {
@@ -578,8 +578,8 @@ const translation = {
   about: {
     changeLog: 'บันทึกการเปลี่ยนแปลง',
     updateNow: 'อัพเดตเดี๋ยวนี้',
-    nowAvailable: 'Dify {{version}} พร้อมใช้งานแล้ว',
-    latestAvailable: 'Dify {{version}} เป็นเวอร์ชันล่าสุดที่มี',
+    nowAvailable: 'D-GEN AI {{version}} พร้อมใช้งานแล้ว',
+    latestAvailable: 'D-GEN AI {{version}} เป็นเวอร์ชันล่าสุดที่มี',
   },
   appMenus: {
     overview: 'ตรวจ สอบ',

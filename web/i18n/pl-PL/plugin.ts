@@ -192,11 +192,11 @@ const translation = {
     empower: 'Zwiększ możliwości rozwoju sztucznej inteligencji',
     viewMore: 'Zobacz więcej',
     and: 'i',
-    difyMarketplace: 'Rynek Dify',
+    difyMarketplace: 'Rynek D-GEN AI',
     noPluginFound: 'Nie znaleziono wtyczki',
     pluginsResult: '{{num}} wyniki',
-    partnerTip: 'Zweryfikowane przez partnera Dify',
-    verifiedTip: 'Zweryfikowane przez Dify',
+    partnerTip: 'Zweryfikowane przez partnera D-GEN AI',
+    verifiedTip: 'Zweryfikowane przez D-GEN AI',
   },
   task: {
     installError: 'Nie udało się zainstalować wtyczek {{errorLength}}, kliknij, aby wyświetlić',
@@ -223,7 +223,7 @@ const translation = {
   metadata: {
     title: 'Wtyczki',
   },
-  difyVersionNotCompatible: 'Obecna wersja Dify nie jest kompatybilna z tym wtyczką, proszę zaktualizować do minimalnej wymaganej wersji: {{minimalDifyVersion}}',
+  difyVersionNotCompatible: 'Obecna wersja D-GEN AI nie jest kompatybilna z tym wtyczką, proszę zaktualizować do minimalnej wymaganej wersji: {{minimalDifyVersion}}',
   requestAPlugin: 'Poproś o wtyczkę',
   publishPlugins: 'Publikowanie wtyczek',
   auth: {

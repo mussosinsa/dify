@@ -611,7 +611,9 @@ x-shared-env: &shared-api-worker-env
 services:
   # API service
   api:
-    image: langgenius/dify-api:1.9.2
+    build:
+      context: ../api
+      dockerfile: Dockerfile
     restart: always
     environment:
       # Use the shared environment variables.
@@ -640,7 +642,9 @@ services:
   # worker service
   # The Celery worker for processing the queue.
   worker:
-    image: langgenius/dify-api:1.9.2
+    build:
+      context: ../api
+      dockerfile: Dockerfile
     restart: always
     environment:
       # Use the shared environment variables.
@@ -667,7 +671,9 @@ services:
   # worker_beat service
   # Celery beat for scheduling periodic tasks.
   worker_beat:
-    image: langgenius/dify-api:1.9.2
+    build:
+      context: ../api
+      dockerfile: Dockerfile
     restart: always
     environment:
       # Use the shared environment variables.

@@ -176,7 +176,7 @@ const translation = {
     communityFeedback: 'フィードバック',
     roadmap: 'ロードマップ',
     community: 'コミュニティ',
-    about: 'Dify について',
+    about: 'D-GEN AI について',
     logout: 'ログアウト',
     github: 'GitHub',
     contactUs: 'お問い合わせ',
@@ -290,7 +290,7 @@ const translation = {
     sendInvite: '招待を送る',
     invitedAsRole: '{{role}}ユーザーとして招待されました',
     invitationSent: '招待が送信されました',
-    invitationSentTip: '招待が送信され、彼らは Dify にサインインしてあなたのチームデータにアクセスできます。',
+    invitationSentTip: '招待が送信され、彼らは D-GEN AI にサインインしてあなたのチームデータにアクセスできます。',
     invitationLink: '招待リンク',
     failedInvitationEmails: '以下のユーザーは正常に招待されませんでした',
     ok: 'OK',
@@ -359,7 +359,7 @@ const translation = {
       openaiHosted: 'ホステッド OpenAI',
       onTrial: 'トライアル中',
       exhausted: 'クォータが使い果たされました',
-      desc: 'Dify が提供する OpenAI ホスティングサービスを使用すると、GPT-3.5 などのモデルを使用できます。トライアルクォータが使い果たされる前に、他のモデルプロバイダを設定する必要があります。',
+      desc: 'D-GEN AI が提供する OpenAI ホスティングサービスを使用すると、GPT-3.5 などのモデルを使用できます。トライアルクォータが使い果たされる前に、他のモデルプロバイダを設定する必要があります。',
       callTimes: '通話回数',
       usedUp: 'トライアルクォータが使い果たされました。独自のモデルプロバイダを追加してください。',
       useYourModel: '現在、独自のモデルプロバイダを使用しています。',
@@ -567,7 +567,7 @@ const translation = {
     },
   },
   apiBasedExtension: {
-    title: 'API 拡張機能は、Dify のアプリケーション全体での簡単な使用のための設定を簡素化し、集中的な API 管理を提供します。',
+    title: 'API 拡張機能は、D-GEN AI のアプリケーション全体での簡単な使用のための設定を簡素化し、集中的な API 管理を提供します。',
     link: '独自の API 拡張機能を開発する方法について学ぶ。',
     add: 'API 拡張機能を追加',
     selector: {
@@ -597,8 +597,8 @@ const translation = {
   about: {
     changeLog: '変更ログ',
     updateNow: '今すぐ更新',
-    nowAvailable: 'Dify {{version}} が利用可能です。',
-    latestAvailable: 'Dify {{version}} が最新バージョンです。',
+    nowAvailable: 'D-GEN AI {{version}} が利用可能です。',
+    latestAvailable: 'D-GEN AI {{version}} が最新バージョンです。',
   },
   appMenus: {
     overview: '監視',
