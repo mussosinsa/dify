@@ -160,7 +160,12 @@ def _extract_text_by_mime_type(*, file_content: bytes, mime_type: str) -> str:
             return _extract_text_from_vtt(file_content)
         case "text/properties":
             return _extract_text_from_properties(file_content)
-        case "application/x-hwp" | "application/vnd.hancom.hwp":
+        case (
+            "application/x-hwp"
+            | "application/vnd.hancom.hwp"
+            | "application/haansofthwp"
+            | "application/vnd.haansofthwp"
+        ):
             return _extract_text_from_hwp(file_content)
         case "application/x-hwpx" | "application/vnd.hancom.hwpx":
             return _extract_text_from_hwpx(file_content)
